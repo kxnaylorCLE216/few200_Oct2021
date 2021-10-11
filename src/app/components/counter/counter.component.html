@@ -8,11 +8,11 @@
           (click)="increment()">
     +
   </button>
-
-  <div>
-    <button class="btn btn-danger"
-            (click)="reset()">
-      RESET
-    </button>
-  </div>
+</div>
+<div>
+  <button (click)="reset()"
+          [disabled]="resetDisabled$ | async"
+          class="btn btn-danger">
+    Reset
+  </button>
 </div>
