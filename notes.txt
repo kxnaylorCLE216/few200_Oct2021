@@ -14,6 +14,8 @@ ng new projectName
 
 https://github.com/JeffryGonzalez/frontendweb100sept2021.git
 
+https://hypertheory.training/
+
 Definitions:
 
 	"State":
@@ -34,7 +36,24 @@ Definitions:
 			- Reactive Extension (rxjs)
 			- k
 
+1. Global State
+	a. It is immutable. Nobody can change the state. There is only "a" current state, and unchangeable.
+	i. A new state can be created. That new state will become the new global state.
+	ii. The new state is create by a single fuctions in your application. It takes all the changes, applies them to your state, and produces, over time, new states. 
+		(this fuctions is called the "reducer" function.
+	iii
+
 
 
 Two Worlds
+
+
+
+
+
+Setting up Redux
+
+Install the node packages
+	- Npm | 
+
 

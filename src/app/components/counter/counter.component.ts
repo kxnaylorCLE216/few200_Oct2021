@@ -18,11 +18,14 @@ export class CounterComponent implements OnInit {
   }
 
   increment() {
-    //this.current += 1;
+    const whatJustHappened = {
+      type: 'incremented count'
+    };
+    this.store.dispatch(whatJustHappened);
   }
 
   decrement() {
-    //this.current -= 1;
+    this.store.dispatch({ type: 'decremented count' })
   }
 
 }

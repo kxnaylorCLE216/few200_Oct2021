@@ -11,5 +11,18 @@ const initialState: CounterState = {
 }
 
 export function reducer(state: CounterState = initialState, action: Action): CounterState {
-  return state;
+
+  switch (action.type) {
+    case 'incremented count': {
+      return { current: state.current + 1 }
+    }
+    case 'decremented count': {
+      return { ...state, current: state.current - 1 }
+    }
+    default: {
+      return state;
+    }
+  }
 }
+
+
