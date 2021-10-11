@@ -14,7 +14,9 @@ const initialState: CounterState = {
 const reducerFunction = createReducer(
   initialState,
   on(actions.countIncremented, (s, a) => ({ ...s, current: s.current + 1 })),
-  on(actions.countDecremented, (s, a) => ({ ...s, current: s.current - 1 }))
+  on(actions.countDecremented, (s, a) => ({ ...s, current: s.current - 1 })),
+  // on(actions.countReset, (s, a) => ({ ...s, current: s.current - s.current }))
+  on(actions.countReset, (s, a) => (initialState))
 )
 
 export function reducer(state: CounterState = initialState, action: Action): CounterState {
