@@ -32,3 +32,8 @@ export const selectResetDisabled = createSelector(
 // export function selectResetDisabled(state: AppState): boolean {
 //   return state.counter.current === 0;
 // }
+
+export const selectCountToGoal = createSelector(
+  selectCounterCurrent,
+  (current) => 100 - current
+)
