@@ -1,18 +1,29 @@
 import { ActionReducer, ActionReducerMap, createSelector } from '@ngrx/store';
-import * as fromCounter from './counter.reducers';
 
+import * as fromCounter from './counter.reducers';
+import * as fromSettings from './settings.reducer';
 
 export interface AppState {
   // Just for typescript - interfaces to nothing for JavaScript
-  counter: fromCounter.CounterState
+  counter: fromCounter.CounterState,
+  settings: fromSettings.SettingsState
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  counter: fromCounter.reducer
+  counter: fromCounter.reducer,
+  settings: fromSettings.reducer
 }
 
 //Selector per "branch" of your application state.
 const selectCounterBranch = (state: AppState) => state.counter;
+const selectSettingsBranch = (state: AppState) => state.settings;
+
+
+
+export const selectCounterGoal = createSelector(
+  selectSettingsBranch,
+  b => b.counterGoal
+)
 
 export const selectCounterCurrent = createSelector(
   selectCounterBranch,
@@ -35,5 +46,6 @@ export const selectResetDisabled = createSelector(
 
 export const selectCountToGoal = createSelector(
   selectCounterCurrent,
-  (current) => 100 - current
+  selectCounterGoal,
+  (current, goal) => goal - current
 )

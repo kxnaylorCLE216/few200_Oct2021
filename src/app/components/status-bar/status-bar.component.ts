@@ -12,8 +12,6 @@ export class StatusBarComponent implements OnInit {
 
   current$!: Observable<number>;
   toGo$!: Observable<number>;
-
-
   constructor(private store: Store<AppState>) {
 
   }
