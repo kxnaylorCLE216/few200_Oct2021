@@ -1,0 +1,40 @@
+https://v2.angular.io/docs/ts/latest/tutorial/
+
+https://labs.azure.com/virtualmachines
+
+ProgressiveITURocks!
+
+volta install node@14.18.0
+
+npm i -g npm
+
+npm i -g @angular/cli
+
+ng new projectName
+
+https://github.com/JeffryGonzalez/frontendweb100sept2021.git
+
+Definitions:
+
+	"State":
+		
+		The values of all meaningful variables in your application.
+		Data that comes from the backend
+		- HTTP Requests
+		- Web Sockets
+		
+		Data that "tracks" that user in the browser.
+		
+	"Components":
+		- Project accurately the application state to the user.
+
+		- Provide "affordances" through which the user can manipulate the application state.
+
+		- "Reactive to the State"
+			- Reactive Extension (rxjs)
+			- k
+
+
+
+Two Worlds
+
